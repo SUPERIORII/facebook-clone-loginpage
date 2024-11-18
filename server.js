@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const path = require("path");
-const axios = require("axios");
+
+const PORT = process.env.PORT || 3000
 // const downloadLink = require("./routes/download");
 
 //Importing the database into the server
@@ -76,5 +77,5 @@ app.get("/download-db", (req, res) => {
 
 app.listen(
   process.env.PORT,
-  console.log(`server is listening on http://localhost:${process.env.PORT}`)
+  console.log(`server is listening on http://localhost:${PORT}`)
 );
